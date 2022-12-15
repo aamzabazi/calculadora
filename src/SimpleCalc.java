@@ -25,22 +25,20 @@ public class SimpleCalc {
             }else{
                 System.out.println("Operación incorrecta!");
             }
-            if(entrada.equals("+")){
-                System.out.println("%d+%d=%d".formatted(n1,n2,n1+n2));
+            switch(entrada){
+                case "+":
+                    System.out.println("%d+%d=%d".formatted(n1,n2,n1+n2));
+                    break;
+                case "-":
+                    System.out.println("%d-%d=%d".formatted(n1,n2,n1-n2));
+                    break;
+                case "x":
+                    System.out.println("%dx%d=%d".formatted(n1,n2,n1*n2));
+                    break;
+                case "/":
+                    System.out.println("%d/%d=%d".formatted(n1,n2,n1/n2));
+                    break;
             }
-            
-            if(entrada.equals("-")){
-                System.out.println("%d-%d=%d".formatted(n1,n2,n1-n2));
-            }
-            
-            if(entrada.equals("x")){
-                System.out.println("%dx%d=%d".formatted(n1,n2,n1*n2));
-            }
-            
-            if(entrada.equals("/")){
-                System.out.println("%d/%d=%d".formatted(n1,n2,n1/n2));
-            }
-            
         }while(!entrada.equals(""));
     }
 }
